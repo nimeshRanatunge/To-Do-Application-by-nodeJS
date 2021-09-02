@@ -1,4 +1,4 @@
-const stuff = require('./stuff')
+const stuff = require('./2-stuff')
 
 console.log(stuff.counter(['nimesh', 'thisara', 'helamba']))
 console.log(stuff.adder(5, 6))
