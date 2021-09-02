@@ -1,24 +1,17 @@
-var events = require('events')
-//var util = require('util')
+var fs = require('fs')
 
-class person extends events.EventEmitter{
-    constructor(name){
-        super()
-        this.name = name
-    }
-}
-
-
-var james = new person('james')
-var larry = new person('larry')
-var ryu = new person('ryu')
-
-var people = [james, larry, ryu]
-
-people.forEach((personn)=>{
-    personn.on('speak', (msg)=>{
-        console.log(`${personn.name} said: ${msg}`)
+fs.mkdir('stufff', ()=>{
+    fs.readFile('readmew.txt', 'utf8', (err, data)=>{
+        if(err){
+            console.error(err)
+        }else{
+            fs.writeFile('./stufff/writeme.txt', data, (err)=>{
+                if(err){
+                    console.log(err)
+                }else{
+                    console.log('ok')
+                }
+            })
+        }
     })
 })
-
-james.emit('speak', 'hey dudes')
