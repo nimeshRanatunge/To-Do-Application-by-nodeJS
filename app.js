@@ -1,9 +1,24 @@
 var events = require('events')
+//var util = require('util')
 
-var myemitter = new events.EventEmitter()
+class person extends events.EventEmitter{
+    constructor(name){
+        super()
+        this.name = name
+    }
+}
 
-myemitter.on('someevent', (mssg)=>{
-    console.log(mssg)
+
+var james = new person('james')
+var larry = new person('larry')
+var ryu = new person('ryu')
+
+var people = [james, larry, ryu]
+
+people.forEach((personn)=>{
+    personn.on('speak', (msg)=>{
+        console.log(`${personn.name} said: ${msg}`)
+    })
 })
 
-myemitter.emit('someevent', 'the event was emitted')
+james.emit('speak', 'hey dudes')
