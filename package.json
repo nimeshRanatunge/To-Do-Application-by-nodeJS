@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nimeshRanatunge/To-Do-Application-by-nodeJS/issues"
   },
-  "homepage": "https://github.com/nimeshRanatunge/To-Do-Application-by-nodeJS#readme"
+  "homepage": "https://github.com/nimeshRanatunge/To-Do-Application-by-nodeJS#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
 }
