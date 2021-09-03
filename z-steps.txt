@@ -1,0 +1,2 @@
+npm install express -save
+after clone a project just run npm install. it will install all dependencioes in the package.json
