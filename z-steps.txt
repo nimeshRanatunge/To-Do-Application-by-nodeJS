@@ -4,3 +4,6 @@ git push
 
 npm install express -save
 after clone a project just run npm install. it will install all dependencioes in the package.json
+
+when we want to inject dynamic content into html etc.. We use template engines (view engine) ex: ejs, jade
+npm install ejs
