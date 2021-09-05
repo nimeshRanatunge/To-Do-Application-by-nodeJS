@@ -3,7 +3,9 @@ const express = require('express')
 const app = express()
 
 app.set('view engine', 'ejs')
-app.use('/assets', express.static('stuff'))
+app.use('/assets', express.static('stuff')) /* Now any request that is made to /assets will be map to stuff folder
+/assets - route stuff-linking up the directory
+*/
 
 app.get('/', (req, res)=>{
     res.render('index')
